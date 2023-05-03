@@ -1,0 +1,27 @@
+$primary:       #0d6efd;
+$secondary:     #6c757d;
+$success:       #198754;
+$info:          #0dcaf0;
+$warning:       #ffc107;
+$danger:        #dc3545;
+$light:         #f8f9fa;
+$dark:          #212529;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@include media-breakpoint-up(md) {
+    .div-scroll-md {
+        overflow-y: scroll;
+    }
+}
+@include media-breakpoint-down(md) {
+    .div-scroll-md {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        > div {
+            flex: 1;
+            overflow-y: scroll;
+        }
+    }
+}
